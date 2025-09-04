@@ -2,15 +2,20 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #181c20 0%, #23272e 100%);
+    background: #181c20;
     color: #e0e3e7;
 }
 header {
-    background: linear-gradient(90deg, #23272e 0%, #181c20 100%);
+    background: #181c20;
     color: #fff;
-    padding: 1.5rem 0 1rem 0;
-    text-align: center;
+    padding: 0;
+    margin: 0;
     box-shadow: 0 2px 8px rgba(24,28,32,0.18);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 nav a {
     color: #fff;
@@ -24,12 +29,13 @@ nav a:hover {
     color: #ffd54f;
 }
 main {
-    max-width: 900px;
+    max-width: 100%;
     margin: 2.5rem auto 3.5rem auto;
-    background: #23272e;
     padding: 2.5rem 2rem;
-    border-radius: 18px;
-    box-shadow: 0 4px 32px rgba(24,28,32,0.18);
+    margin-left: 220px; /* Keep sidebar offset */
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 h1, h2, h3 {
     color: #ffd54f;
@@ -63,17 +69,6 @@ code {
     background: #181c20;
     color: #ffd54f;
 }
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #181c20;
-    color: #888;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    box-shadow: 0 -2px 8px rgba(24,28,32,0.18);
-}
 section#sql-notes ul {
     background: #23272e;
     border-radius: 8px;
@@ -86,18 +81,25 @@ section#sql-notes li {
 }
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     margin-top: 2rem;
+    width: 100%;
 }
 .side-nav {
-    min-width: 180px;
-    background: #181c20;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(24,28,32,0.18);
-    padding: 1.5rem 1rem;
-    position: sticky;
-    top: 6rem;
-    height: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background: #23272e;
+    border-right: 2px solid #181c20;
+    padding-top: 110px; /* header height + spacing */
+    padding-left: 0;
+    padding-right: 0;
+    overflow-y: auto;
+    z-index: 100;
 }
 .side-nav ul {
     list-style: none;
@@ -166,35 +168,69 @@ section#sql-notes li {
     color: #ffd54f;
 }
 .main-content {
-    flex: 1;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
 }
 .main-nav {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 1.2rem;
-    margin-top: 1rem;
+    position: relative;
+    height: 56px;
+    background: #181c20;
+    box-shadow: none;
+    border-bottom: 1.5px solid #23272e;
 }
-.main-nav .action-btn {
-    background: linear-gradient(90deg, #ffd54f 0%, #ffe082 100%);
-    color: #23272e !important;
-    border-radius: 10px;
-    padding: 0.3em 1.2em;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(255, 213, 79, 0.12);
-    transition: background 0.2s, color 0.2s;
+.home-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
-.main-nav .action-btn:hover {
-    background: linear-gradient(90deg, #ffe082 0%, #ffd54f 100%);
-    color: #ffd54f !important;
+.home-icon svg {
+    display: block;
+    height: 28px;
+    width: 28px;
+    stroke: #ffd54f;
+    transition: stroke 0.2s;
+}
+.home-icon:hover svg {
+    stroke: #ffe082;
+}
+.page-title {
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffd54f;
+    letter-spacing: 0.04em;
+    text-align: center;
+    display: block;
 }
 .card-block {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2.5rem;
+    width: 100%;
 }
 .card {
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
     background: #181c20;
     border-radius: 20px;
     box-shadow: 0 4px 32px rgba(24, 28, 32, 0.18), 0 1.5px 6px rgba(0, 0, 0, 0.10);
@@ -234,7 +270,6 @@ section#sql-notes li {
 
 .card.active-card {
     border-left: 8px solid #ffe082;
-    box-shadow: 0 8px 40px rgba(255, 213, 79, 0.22), 0 2px 8px rgba(0,0,0,0.14);
     background: linear-gradient(120deg, #23272e 60%, #181c20 100%);
     transform: scale(1.015);
     transition: box-shadow 0.2s, border 0.2s, background 0.2s, transform 0.2s;
@@ -247,6 +282,35 @@ section#sql-notes li {
     background: #23272e;
     border: 1.5px solid #ffd54f44;
     box-shadow: 0 2px 12px #ffd54f22;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background: #23272e;
+    box-shadow: 2px 0 8px rgba(24,28,32,0.12);
+    padding-top: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.sidebar a {
+    color: #ffd54f;
+    font-size: 1.15rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.sidebar a:hover {
+    color: #fff;
 }
 @media (max-width: 900px) {
     .container {
@@ -270,10 +334,23 @@ section#sql-notes li {
         padding: 1.2rem 1rem 1rem 1rem;
     }
 }
+@media (max-width: 700px) {
+    .side-nav {
+        width: 100px;
+        padding-top: 90px;
+    }
+    main {
+        margin-left: 100px;
+    }
+}
 @media (max-width: 600px) {
     .main-nav {
         flex-direction: column;
         gap: 0.5rem;
+        height: 48px;
+    }
+    body {
+        padding-top: 48px;
     }
     .side-nav {
         padding: 1rem 0.5rem;
