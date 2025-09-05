@@ -1,0 +1,56 @@
+site_name: Nikita's Dev Docs
+site_description: Personal development documentation, tips, and quality-of-life improvements
+site_author: Nikita
+
+nav:
+  - SQL:
+      - sql.md
+      - sql-select.md
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          name: English
+          default: true
+        - locale: pl
+          name: Polski
+        - locale: ru
+          name: Русский
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  language: en
+
+extra_javascript:
+  - javascripts/filter-search-by-lang.js
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
