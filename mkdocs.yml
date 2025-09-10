@@ -50,6 +50,7 @@ nav:
   - SQL: 
       - Overview: sql/index.md
       - SELECT Clause: sql/select-clause.md
+      - WHERE Clause: sql/where-clause.md
   - Programming:
       - Overview: programming/index.md
       - Python: programming/python.md

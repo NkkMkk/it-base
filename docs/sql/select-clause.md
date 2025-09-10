@@ -1,4 +1,5 @@
 # **SELECT clause**
+
 ---
 
  Structured Query Language ([SQL](https://www.postgresql.org/docs/current/sql.html)) is the standard language for working with relational databases.
@@ -11,6 +12,7 @@ What you'll learn:
 - A few quick examples you can try
 
 ## **CRUD**
+
 ---
 
 Working with databases typically involves four operations: [Create, Read, Update, Delete (CRUD)](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete). This lesson focuses on Read — retrieving data with [`SELECT`](https://www.postgresql.org/docs/current/sql-select.html).
@@ -18,6 +20,7 @@ Working with databases typically involves four operations: [Create, Read, Update
 `SELECT` returns a result set (a table of rows) based on the columns and table you specify.
 
 ## **SELECT statement syntax**
+
 ---
 
 The basic form is:
@@ -38,6 +41,7 @@ FROM table_name;
 ```
 
 ## **Comments**
+
 ---
 
 Comments explain SQL statements or temporarily disable them. Two common styles are supported (see the [comments section of the SQL lexical rules](https://www.postgresql.org/docs/current/sql-syntax-lexical.html#SQL-SYNTAX-COMMENTS)):
@@ -53,11 +57,12 @@ SELECT * FROM movie;
 
 ```sql
 /* SELECT name FROM actor;
-	SELECT title FROM book; */
+SELECT title FROM book; */
 SELECT title FROM movie;
 ```
 
 ## **Quick examples**
+
 ---
 
 - Select specific columns:
