@@ -1,9 +1,11 @@
 # **Introduction to SQL**
 ---
 
-[SQL](https://www.postgresql.org/docs/current/sql.html) (Structured Query Language) is the standard language for working with relational databases. It lets you define, query, and manipulate structured data stored in tables.
+ Structured Query Language ([SQL](https://www.postgresql.org/docs/current/sql.html)) lets you query and manipulate structured data stored in tables. Many Database Management Systems (DBMS) implement SQL or a close dialect of it.
 
-What you'll learn
+> SQL is commonly pronounced by letters ("S‑Q‑L"), though you'll sometimes hear "sequel".
+
+What you'll learn:
 
 - The difference between databases, DBMS, and RDBMS
 - How relational data is organized (tables, rows, columns)

@@ -47,7 +47,9 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - SQL: sql/index.md
+  - SQL: 
+      - Overview: sql/index.md
+      - SELECT Clause: sql/select-clause.md
   - Programming:
       - Overview: programming/index.md
       - Python: programming/python.md
