@@ -15,10 +15,8 @@ theme:
   logo: images/logo.png
   favicon: images/favicon.ico
   features:
-    - navigation.tabs
     - navigation.instant
     - navigation.tracking
-    - navigation.indexes
     - navigation.top
     - content.code.copy
     - content.tabs.link
@@ -48,14 +46,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - SQL: 
-      - Overview: sql/index.md
+      - Introduction to SQL: sql/index.md
       - SELECT Clause: sql/select-clause.md
       - WHERE Clause: sql/where-clause.md
-  - Programming:
-      - Overview: programming/index.md
-      - Python: programming/python.md
-      - JavaScript: programming/javascript.md
-      - Tips & Snippets: programming/snippets.md
 
 plugins:
   - search

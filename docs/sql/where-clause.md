@@ -94,7 +94,7 @@ Logical operators let you combine simple conditions into richer predicates. SQL 
 
 ---
 
-#### **AND — all conditions must be true**
+#### **`AND` — all conditions must be true**
 
 the condition_1 AND condition_2 must both be true for the row to be included.
 
@@ -124,7 +124,7 @@ WHERE city = 'Vilnius' AND age = 18;
 |------------|----:|------|
 | Alice      |  18 | Vilnius |
 
-#### **OR — at least one condition must be true**
+#### **`OR` — at least one condition must be true**
 
 the condition_1 OR condition_2 must be true for the row to be included.
 
@@ -149,7 +149,7 @@ WHERE age = 18 OR age = 23;
 | Alice      |  18 | Vilnius |
 | John       |  23 | Kaunas  |
 
-#### **NOT — negate a condition**
+#### **`NOT` — negate a condition**
 
 the NOT condition negates the truth value of the condition.
 
@@ -212,7 +212,7 @@ WHERE age BETWEEN 20 AND 30;
 | 2 | Maria      | 24 |
 | 3 | Tom        | 30 |
 
-### **LIKE (pattern matching)**
+### **`LIKE` (pattern matching)**
 
 Use % for any-length wildcard and _ for a single character.
 
@@ -247,7 +247,7 @@ WHERE username LIKE 'b_n%';
 > Matches "ben_s" (underscore matches one character).
 > Case sensitivity depends on the database collation.
 
-### **IN (set membership)**
+### **`IN` (set membership)**
 
 IN is shorthand for multiple OR comparisons.
 
