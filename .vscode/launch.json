@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "configurations": [
+    {
+      "name": "Launch Site",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mkdocs",
+      "args": [
+        "serve",
+        "-f",
+        "mkdocs.yml",
+        "-a",
+        "localhost:8000"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mkdocs",
+      "args": [
+        "gh-deploy",
+        "-f",
+        "mkdocs.yml",
+        "--clean",
+        "--remote-name",
+        "origin"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}
