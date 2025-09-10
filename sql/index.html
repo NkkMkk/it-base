@@ -16,7 +16,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../programming/">
+        <link rel="next" href="select-clause/">
       
       
       <link rel="icon" href="../images/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>SQL - IT Base</title>
+        <title>Overview - IT Base</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SQL
+              Overview
             
           </span>
         </div>
@@ -204,17 +204,20 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
   
   
     
   
   SQL
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -302,16 +305,37 @@
   
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+        
+          
+        
       
         
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
           
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
   
   
   <span class="md-ellipsis">
@@ -320,102 +344,72 @@
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="select-clause/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    SQL
+    SELECT Clause
     
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="where-clause/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WHERE Clause
     
+  </span>
   
+
+      </a>
+    </li>
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Databases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbms-database-management-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      DBMS (Database Management System)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rdbms-relational-dbms" class="md-nav__link">
-    <span class="md-ellipsis">
-      RDBMS (Relational DBMS)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-relational-data-is-organized" class="md-nav__link">
-    <span class="md-ellipsis">
-      How relational data is organized
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-data-types-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common data types (overview)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-simple-library-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: Simple library schema
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sample-queries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample queries
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -666,8 +660,11 @@
 
 <h1 id="introduction-to-sql"><strong>Introduction to SQL</strong><a class="headerlink" href="#introduction-to-sql" title="Permanent link">&para;</a></h1>
 <hr />
-<p><a href="https://www.postgresql.org/docs/current/sql.html">SQL</a> (Structured Query Language) is the standard language for working with relational databases. It lets you define, query, and manipulate structured data stored in tables.</p>
-<p>What you'll learn</p>
+<p>Structured Query Language (<a href="https://www.postgresql.org/docs/current/sql.html">SQL</a>) lets you query and manipulate structured data stored in tables. Many Database Management Systems (DBMS) implement SQL or a close dialect of it.</p>
+<blockquote>
+<p>SQL is commonly pronounced by letters ("S‑Q‑L"), though you'll sometimes hear "sequel".</p>
+</blockquote>
+<p>What you'll learn:</p>
 <ul>
 <li>The difference between databases, DBMS, and RDBMS</li>
 <li>How relational data is organized (tables, rows, columns)</li>
@@ -724,7 +721,7 @@
 <p>This tiny schema shows three related tables: authors, books, and loans. It's intentionally small to illustrate relationships.</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
 <span class="p">);</span>
 </code></pre></div>
 <table>
@@ -854,27 +851,25 @@
 <h2 id="sample-queries"><strong>Sample queries</strong><a class="headerlink" href="#sample-queries" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>
-<p>Find all books by a given author:
+<li>Find all books by a given author:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span>
 <span class="k">JOIN</span><span class="w"> </span><span class="n">authors</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">author_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">id</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Agatha Christie&#39;</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>List all books with their authors:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>List all currently loaned out books:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</code></pre></div></p>
-</li>
+</code></pre></div>
+<ul>
+<li>List all books with their authors:</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li>List all currently loaned out books:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</code></pre></div>
 
 
 
