@@ -1,0 +1,62 @@
+/* Table styling overrides for MkDocs site */
+table.md-typeset-table,
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 1rem 0;
+}
+
+table th,
+table td {
+	border: 1px solid rgba(0,0,0,0.08);
+	padding: 0.5rem 0.75rem;
+	text-align: left;
+}
+
+table thead th {
+	background: rgba(0,0,0,0.04);
+	font-weight: 600;
+}
+
+table tbody tr:nth-child(odd) {
+	background: rgba(0,0,0,0.02);
+}
+
+/* Make code blocks inside tables wrap reasonably */
+table pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+/* Dark / slate theme tweaks: use light borders and subtle highlights */
+body[data-md-color-scheme="slate"] table,
+body[data-md-color-scheme="slate"] table.md-typeset-table {
+	border-collapse: collapse;
+}
+
+body[data-md-color-scheme="slate"] table th,
+body[data-md-color-scheme="slate"] table td {
+	border: 1px solid rgba(255,255,255,0.06);
+	padding: 0.5rem 0.75rem;
+}
+
+body[data-md-color-scheme="slate"] table thead th {
+	background: rgba(255,255,255,0.03);
+}
+
+body[data-md-color-scheme="slate"] table tbody tr:nth-child(odd) {
+	background: rgba(255,255,255,0.02);
+}
+
+/* Ensure code inside tables remains readable on dark background */
+body[data-md-color-scheme="slate"] table code,
+body[data-md-color-scheme="slate"] table pre {
+	color: inherit;
+}
+
+/* Force tables to use the full content width and make cells wrap better */
+.md-typeset table,
+.md-content table {
+	width: 100% !important;
+	table-layout: auto;
+}
