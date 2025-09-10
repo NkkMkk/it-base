@@ -1,4 +1,4 @@
-# **WHERE clause**
+# **`WHERE` clause**
 
 ---
 

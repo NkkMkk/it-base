@@ -7,8 +7,8 @@ theme:
   custom_dir: overrides
   palette:
     scheme: slate
-    primary: red
-    accent: red
+    primary: indigo
+    accent: indigo
   font:
     text: Roboto
     code: Roboto Mono
@@ -18,8 +18,11 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.top
+    - navigation.footer
+
     - content.code.copy
     - content.tabs.link
+
     - search.suggest
     - search.highlight
 

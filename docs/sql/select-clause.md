@@ -1,4 +1,4 @@
-# **SELECT clause**
+# **`SELECT` clause**
 
 ---
 
@@ -19,7 +19,7 @@ Working with databases typically involves four operations: [Create, Read, Update
 
 `SELECT` returns a result set (a table of rows) based on the columns and table you specify.
 
-## **SELECT statement syntax**
+## **`SELECT` statement syntax**
 
 ---
 
